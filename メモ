@@ -1,0 +1,5 @@
+コンテナから設計図をつくって、その設計図でサーバーを複製する方法。
+これをすると、最初からインストールをやりなおさずに済む
+
+docker commit [コンテナ名称] [設計図の名前（任意）]
+docker run -itd -p 80:80 -p 3306:3306 -v /Users/hayakawautano/Desktop/twittertest:/src --privileged --name LaravelTest [ここを作った設計図の名前に]:latest /sbin/init
